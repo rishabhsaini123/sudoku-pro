@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sudoku Pro</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- MENU -->
+<div id="menuScreen" class="screen active">
+  <h1 class="title">Sudoku Pro</h1>
+
+  <div class="coins">🪙 <span id="coins">0</span></div>
+
+  <div class="menu-box">
+    <div class="left">
+      <h3>Difficulty</h3>
+      <button data-level="easy">Easy</button>
+      <button data-level="medium">Medium</button>
+      <button data-level="hard">Hard</button>
+      <button data-level="extreme">Extreme</button>
+    </div>
+
+    <div class="center">
+      <button id="startBtn">START</button>
+      <button onclick="resumeGame()">Resume</button>
+      <button onclick="showLeaderboard()">Leaderboard</button>
+    </div>
+
+    <div class="right">
+      <h3>Timer</h3>
+      <button data-time="2">2m</button>
+      <button data-time="5">5m</button>
+      <button data-time="10">10m</button>
+      <button data-time="15">15m</button>
+    </div>
+  </div>
+
+  <footer>Made by - Rishabh Saini</footer>
+</div>
+
+<!-- GAME -->
+<div id="gameScreen" class="screen">
+  <div class="top-bar">
+    ⏱ <span id="timer"></span>
+    ❤️ <span id="lives">5</span>
+    🪙 <span id="coinsGame"></span>
+  </div>
+
+  <div id="grid"></div>
+
+  <button id="exitBtn">Exit</button>
+</div>
+
+<!-- LEADERBOARD -->
+<div id="leaderboardScreen" class="screen">
+  <h2>Leaderboard</h2>
+  <ul id="leaderboardList"></ul>
+  <button onclick="backMenu()">Back</button>
+</div>
+
+<!-- WIN MODAL -->
+<div id="winModal" class="modal">
+  <div class="modal-content">
+    🎉 You are a Champion!
+    <br><br>
+    <button onclick="closeModal()">OK</button>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
